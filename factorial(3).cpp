@@ -5,21 +5,30 @@ int main()
 	long long int fact;
 	
 	printf("Enter a number:");
-	scanf("%d",&n);
 	
-	if(n<0)
+	if (scanf("%d",&n)!=1)
 	{
-		printf("The number is negative!!");
+		printf("INVALID!");
 	}
-	
 	else
 	{
-		for(int i=1;i<=n;i++)
+	
+		if(n<0)
 		{
-			fact*=i;
+			printf("The number is negative!!");
 		}
-	printf("The fatorial of %d is %lld",n,fact);
+	
+		else
+		{
+			for(int i=1;i<=n;i++)
+			{
+				fact*=i;
+			}
+		printf("The fatorial of %d is %lld",n,fact);
+		}
 	}
+	
+	
 	return 0;
 
 }
