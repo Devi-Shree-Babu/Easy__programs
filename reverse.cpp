@@ -3,15 +3,31 @@ int main()
 {
 	int rev,n,rem;
 	printf("Enter the number:");
-	scanf("%d",&n);
 	
-	while (n!=0)
+	
+	if (scanf("%d",&n)!=1)
 	{
-		rem=n%10;
-		rev=rev*10+rem;
-		n/=10;
+		printf("Invalid input!");
 	}
-	printf("The reverse is %d",rev);
+	else
+	{
+		if (n<0)
+		{
+			printf("The number has negative sign!");
+		}
+		else
+		{
+			while (n!=0)
+			{
+				rem=n%10;
+				rev=rev*10+rem;
+				n/=10;
+			}
+		printf("The reverse is %d",rev);	
+		}
+	}
+	
+	
 	
 	return 0;
 	
